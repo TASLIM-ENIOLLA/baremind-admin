@@ -1,0 +1,221 @@
+.main-body {
+  padding-top: 20px;
+}
+/* ================= Tag ========== */
+/* ================================== */
+.tags {
+  display: flex;
+  align-items: center;
+}
+.tags .item {
+  margin-right: 10px;
+  border-radius: 4px;
+  background: #fff;
+  padding: 10px;
+  font-size: 10px;
+  color: rgb(71, 71, 71);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.tags .item.active,
+.tags .item:hover {
+  box-shadow: -5px 5px 10px rgba(221, 221, 221, 0.589);
+}
+
+/* ================== Event Section========== */
+/* =========================================== */
+.event-container {
+  margin: 20px 0;
+}
+.event-item {
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 3px 3px 13px #eee;
+  padding: 20px;
+}
+.event-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: rgb(110, 110, 110);
+}
+.event-type {
+  font-size: 14px;
+}
+.event-details-title {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.event-content-container {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+.event-content-left {
+  width: 70%;
+}
+.event-content-left h3 {
+  font-size: 15px;
+}
+.event-content-left p {
+  margin-top: 3px;
+  font-size: 10px;
+  color: rgb(122, 122, 122);
+}
+.event-content-right {
+  width: 30%;
+  /* padding-left: 3px; */
+}
+.date-item {
+  height: 70px;
+  width: 50px;
+  background: rgb(245, 245, 245);
+  border-radius: 7px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.date {
+  font-size: 20px;
+  font-weight: 700;
+}
+.day {
+  font-weight: 300;
+}
+.event-details-items {
+  display: flex;
+  margin-bottom: 20px;
+}
+.event-icon {
+  font-size: 11px;
+  margin: 5px 0;
+  color: rgb(110, 110, 110);
+}
+.event-details-info {
+  margin-left: 20px;
+}
+.event-info {
+  font-size: 11px;
+  margin: 5px 0;
+  color: rgb(110, 110, 110);
+}
+
+/* =========== Create Post=========== */
+/* ========================================== */
+.create-post-container,
+.post-container {
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 13px rgb(240, 240, 240);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.create-post-container .title {
+  margin-bottom: 3px;
+}
+.create-post-wrapper,
+.post-content {
+  background: rgb(243, 243, 243);
+  padding: 30px;
+  display: flex;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.create-post-icon {
+  color: rgb(59, 59, 59);
+  font-size: 30px;
+  margin-right: 30px;
+}
+textarea.create-post-field {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 15px;
+}
+
+.create-post-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.create-action-icon {
+  margin-right: 30px;
+  font-size: 20px;
+  color: var(--green-color);
+  cursor: pointer;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.post-user-item {
+  display: flex;
+  align-items: center;
+}
+.post-user-img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+.post-user-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+.post-time {
+  font-size: 11px;
+}
+.post-head-icon {
+  font-size: 20px;
+  font-weight: 600;
+}
+.post-content {
+  margin: 30px 0;
+  font-size: 12px;
+  font-weight: lighter;
+  color: rgb(151, 151, 151);
+  line-height: 20px;
+}
+.post-footer {
+  display: flex;
+  align-items: center;
+}
+.post-footer-icon {
+  margin-right: 20px;
+  font-size: 14px;
+  color: rgb(172, 172, 172);
+  display: flex;
+  align-items: center;
+}
+.post-footer-icon bi {
+  cursor: pointer;
+}
+.post-footer-icon span {
+  font-size: 12px;
+  margin-left: 10px;
+}
+@media only screen and (max-width: 500px) {
+  .create-post-container,
+  .post-container {
+    padding: 10px;
+  }
+  .create-post-wrapper,
+  .post-content {
+    padding: 10px;
+    font-size: unset;
+  }
+  .post-footer-icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+}

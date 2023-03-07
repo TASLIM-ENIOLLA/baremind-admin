@@ -1,0 +1,117 @@
+/* ========== Quick Actions ======= */
+/* ===================================== */
+.quick-action-container {
+  margin-top: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.quick-action-item {
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  background: #fff;
+  box-shadow: -5px 5px 12px rgba(221, 221, 221, 0.637);
+}
+.quick-action-icon {
+  width: 70px;
+  height: 70px;
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(213, 221, 248, 0.74);
+  color: rgb(70, 106, 224);
+  font-size: 20px;
+  margin-right: 10px;
+}
+.quick-action-text {
+  margin-left: 10px;
+  flex: 10;
+}
+.quick-action-text p {
+  /* font-size: 15px; */
+  font-weight: 600;
+}
+.quick-action-text .text-action {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+/* ========= Goal Styles========== */
+/* =================================== */
+.goal-container {
+  margin-bottom: 20px;
+}
+.goal-item {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #edf3ff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.goal-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  background: #8791d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 20px;
+}
+.goal-title {
+  font-size: 13px;
+}
+.progress-container {
+  margin-top: 10px;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 50px;
+}
+.progress-track {
+  border-radius: 50px;
+  width: 50%;
+  height: 100%;
+  background: rgb(70, 106, 224);
+}
+@media only screen and (max-width: 500px) {
+  .quick-action-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .quick-action-icon {
+    width: 50px;
+    height: 70px;
+    margin: 0;
+  }
+  .quick-action-text p {
+    /* font-size: 12px; */
+    font-weight: 400;
+  }
+  .quick-action-text .text-action {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .quick-action-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .quick-action-text {
+    margin-left: 10px;
+    display: flex;
+    flex: 10;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #myChart {
+    height: 290px !important;
+    width: 290px !important;
+  }
+}
