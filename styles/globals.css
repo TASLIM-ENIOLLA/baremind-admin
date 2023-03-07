@@ -1,0 +1,38 @@
+@import url("more-css/common.css");
+@import url("more-css/bootstrap.min.css");
+@import url("font-awesome/font-awesome/font-awesome.css");
+@import url("font-awesome/animate.css");
+@import url('/b-icon/font/bootstrap-icons.css');
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 20px;
+    background: var(--theme-color);
+}
+.hero-bg{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/image-264.png);
+    background-size: cover;
+    background-position: center;
+}
+.login-bg{
+    background-color: rgba(255, 255, 255, 0.75);
+}
+.text-action{
+    color: rgba(9, 207, 131, 1);
+}
+.bg-action{
+    background: rgba(9, 207, 131, 1);
+}
+.bg-pink{
+    background: #f3cdde;
+}
+.text-pink{
+    color: #f3cdde;
+}
+.bg-light-deep{
+    background: #ecf0f3;
+}
