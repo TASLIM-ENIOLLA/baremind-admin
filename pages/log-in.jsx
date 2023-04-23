@@ -3,7 +3,7 @@ import {server}    from '../config'
 import {notify}    from '../components/Popups'
 import {useCookie} from '../functions/cookies'
 
-export default () => {
+export default function Login () {
     const [formData, setFormData] = useState({
         email: 'malhodi@bruiz.dev',
         password: '11111111'
@@ -25,23 +25,23 @@ export default () => {
                             <div className = 'py-3'>
                                 <h3 className = 'text-dark bold'>Welcome back</h3>
                                 <p className = 'text-muted'>Log in to get started</p>
-                                <form onSubmit = {(e) => (
+                                <form onSubmit = {(e) => {
                                     e.preventDefault(),
-                                    Login(formData)
-                                )} className = 'py-4'>
+                                    login(formData)
+                                }} className = 'py-4'>
                                     <div className = 'pb-4'>
-                                        <span className = 'text-muted d-inline-block pb-2'>Email address</span>
-                                        <input value = {formData.email} onChange = {e => setFormData({...formData, email: e.target.value})} type="text" name = 'email' className = 'd-block w-100 border-0 p-3 shadow bg-white rounded' />
+                                        <span className = 'text-muted d-inline-block pb-1'>Email address</span>
+                                        <input value = {formData.email} onChange = {e => setFormData({...formData, email: e.target.value})} type="text" name = 'email' className = 'd-block w-100 border-0 p-3 shadow-sm bg-light rounded' />
                                     </div>
                                     <div className = 'pb-4'>
-                                        <span className = 'text-muted d-inline-block pb-2'>Password</span>
-                                        <input name = 'password' value = {formData.password} onChange = {e => setFormData({...formData, password: e.target.value})} type="password" className = 'd-block w-100 border-0 p-3 shadow bg-white rounded' />
+                                        <span className = 'text-muted d-inline-block pb-1'>Password</span>
+                                        <input name = 'password' value = {formData.password} onChange = {e => setFormData({...formData, password: e.target.value})} type="password" className = 'd-block w-100 border-0 p-3 shadow-sm bg-light rounded' />
                                         <p className = 'text-right'>
-                                            <span style = {{color: '#07a76a'}} className = 'd-inline-block pt-3'>Forgot password?</span>
+                                            <a href = '/forgot-password' style = {{color: '#118d5d'}} className = 'd-inline-block pt-3'>Forgot password?</a>
                                         </p>
                                     </div>
                                     <div className = 'pt-3'>
-                                        <input value = "Log in" type="submit" className = 'd-block w-100 border-0 p-3 shadow btn flicker text-white bg-action rounded' />
+                                        <input style = {{fontWeight: 'bold', fontSize: '1.2rem'}} value = "Log in" type="submit" className = 'd-block w-100 border-0 p-3 shadow btn flicker text-light bg-action rounded' />
                                     </div>
                                 </form>
                             </div>
@@ -53,7 +53,7 @@ export default () => {
     )
 }
 
-const Login = async (formData) => {
+const login = async (formData) => {
     const req = await fetch(`./api/log-in`, {method: 'POST', body: JSON.stringify(formData)})
     const {type, data} = await req.json()
     const {setCookie} = useCookie()

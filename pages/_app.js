@@ -7,13 +7,6 @@ export default ({Component, pageProps}) => {
         <>
             <Head>
                 <link href = '/img/logo.png' rel = 'shortcut icon' />
-                <Script 
-                    strategy = "beforeInteractive"
-                    strategy = "afterInteractive"
-                    strategy = "lazyOnload"
-                    strategy = "worker"
-                    src="../script/doc.jsfgd"
-                />
             </Head>
             <div id = '__popup'></div>
             <Component className = "po-rel" style = {{zIndex: 0}} {...pageProps} />

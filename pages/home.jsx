@@ -1,4 +1,4 @@
-// import {ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis} from 'recharts'
+import {ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Text} from 'recharts'
 import Dashboard from '../components/Dashboard'
 import {useRef, useState, useEffect} from 'react'
 
@@ -26,7 +26,7 @@ const PieChartData = [
 
 const PieChartColors = ['#A4E3F6', '#C4CBFF', '#9CFFD9', '#F9E5CB', '#DBBFFF']
 
-export default ({userData}) => {
+export default function Home ({userData}) {
 
     return (
         <Dashboard>
@@ -118,7 +118,7 @@ export default ({userData}) => {
                             </div>
                         </div>
                         <div className = 'p-3'>
-                            {/*<ResponsiveContainer width='100%' height={300}>
+                            <ResponsiveContainer width='100%' height={300}>
                                 <BarChart data={BarChartData}>
                                     <XAxis text = {{value: 'name'}} stroke = "#00000000" margin ={{top: '10'}} dataKey="name" />
                                     <Bar shape = {({x, y, height, width, fill, name, ...rest}) => {
@@ -136,7 +136,7 @@ export default ({userData}) => {
                                         ))
                                     }</Bar>
                                 </BarChart>
-                            </ResponsiveContainer>*/}
+                            </ResponsiveContainer>
                         </div>
                     </div>
                     <div className = 'mb-5'>
@@ -207,28 +207,30 @@ export default ({userData}) => {
                             <option value="">last 30 days</option>
                         </select>
                         <div className = 'overflow-x-auto'>
-                            {/*<ResponsiveContainer width='100%' height={400}>
+                            <ResponsiveContainer width='100%' height={400}>
                                 <PieChart>
                                     <Pie data={PieChartData} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={90} outerRadius={120} label = {{fill: 'grey'}}>{
                                         PieChartData.map((each, index) => (
-                                            <Cell key = {index} fill = {PieChartColors[index]} />
+                                            <>
+                                                <Cell key = {index} fill = {PieChartColors[index]}>sadfdsfd {index}</Cell>
+                                            </>
                                         ))
                                     }</Pie>
                                 </PieChart>
-                            </ResponsiveContainer>*/}
+                            </ResponsiveContainer>
                         </div>
                         <div className = 'row'>{
-                            // PieChartData.map(({name, value}, index) => (
-                            //     <div key = {index} className="col-6 p-3">
-                            //         <div className="flex-h a-i-c">
-                            //             <span style = {{color: PieChartColors[index]}} className = 'fa fa-circle-o bold mr-3'></span>
-                            //             <div>
-                            //                 <h5 className = 'text-dark one-line text-capitalize'>{name}</h5>
-                            //                 <span className = 'text-muted one-line'>{value} users</span>
-                            //             </div>
-                            //         </div>
-                            //     </div>
-                            // ))
+                            PieChartData.map(({name, value}, index) => (
+                                <div key = {index} className="col-6 p-3">
+                                    <div className="flex-h a-i-c">
+                                        <span style = {{color: PieChartColors[index]}} className = 'fa fa-circle-o bold mr-3'></span>
+                                        <div>
+                                            <h5 className = 'text-dark one-line text-capitalize'>{name}</h5>
+                                            <span className = 'text-muted one-line'>{value} users</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
                         }</div>
                     </div>
                 </div>
