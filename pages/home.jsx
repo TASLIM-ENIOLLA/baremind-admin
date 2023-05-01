@@ -211,9 +211,7 @@ export default function Home ({userData}) {
                                 <PieChart>
                                     <Pie data={PieChartData} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={90} outerRadius={120} label = {{fill: 'grey'}}>{
                                         PieChartData.map((each, index) => (
-                                            <>
-                                                <Cell key = {index} fill = {PieChartColors[index]}>sadfdsfd {index}</Cell>
-                                            </>
+                                            <Cell key = {index} fill = {PieChartColors[index]} />
                                         ))
                                     }</Pie>
                                 </PieChart>
